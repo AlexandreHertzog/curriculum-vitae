@@ -1,0 +1,100 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+\par{\centering{\Huge Alexandre \textsc{Hertzog}}\bigskip\par}
+    
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Porto Alegre, Brazil  | 12 September 1990 \\
+    \textsc{Address:}   & Avenida Bento Gonçalves, 1515, Porto Alegre, Brazil \\
+    \textsc{Phone:}     & +55 51 982 998 836\\
+    \textsc{email:}     & \href{mailto:alex.hertzog@outlook.com}{alex.hertzog@outlook.com}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+    \emph{Current} & TI Specialist at \textsc{Auttar} (financial institution), Porto Alegre \\\textsc{May 2018}&\emph{Product Lead, Scrum Master}\\&\footnotesize{Using \textsc{Java} to implement Weblogic and SpringBoot services. Embedded systems programming in C for Pinpads and \emph{Points-of-sale}. Maintenance of C and C++ libraries. Support of legacy applications for international clients. Vanguard in modernizing infrastructure and team workflows. \textsc{Pci} and \textsc{Pa-Dss} compliant \emph{Agile} environment. }
+ 
+    \\ \multicolumn{2}{c}{} \\ \textsc{Mar-May 2018} & Software Engineer at \textsc{Crossover for Work}, Remote \\&\emph{Unit test implementation}\\&\footnotesize{Worked with an international team to implement unit tests for pre-existing code in C98 and C++98. High productivity standards and code coverage metrics. Git used for versioning and merge requests, CMake for project management and JIRA for work tagging. Development done mainly in Docker containers.}
+ 
+    \\ \multicolumn{2}{c}{} \\ \textsc{Mar 2016 - Feb 2018} & Programmer 2 at \textsc{Elipse Software}, Porto Alegre \\&\emph{Driver developer and API manager}\\&\footnotesize{Driver development with C++14 and Visual Studio, including drivers like CIP (Common Industrial Protocol) and KNX (for home automation). Creation of automated functional tests for these drivers, including the implementation of simulators for such devices. TFS used for versioning and FogBugz for work tracking. Driver department API extensions, including new functionalities. Implementation of functional tests for pre-existing code and opened tickets for the API. Code review for programming standard checking, code validation, programming errors and API misuses.}
+ 
+    \\ \multicolumn{2}{c}{} \\ \textsc{Apr-Sep 2015} & Programmer Intern at \textsc{NOVUS Automation}, Porto Alegre \\&\emph{}\\&\footnotesize{Maintenance of existing code, including hard key setup and the inclusion of self-updaters, while using he Borland C++ IDE for Windows. }
+\end{tabular}
+
+\section{Education}
+\begin{tabular}{rl}
+    \textsc{May} 2019 & Security Specialist, \textbf{Universidade Federal do Rio Grande do Sul}, Porto Alegre \\
+    & Thesis: ``Interfaces seguras em aplicações acessíveis'' | \small Advisor: Marcelo \textsc{Pimenta} \\&\\
+    
+    \textsc{December} 2015 & Bachelor in \textsc{Computer Engineering}, \textbf{Universidade Federal do Rio Grande do Sul}, Porto Alegre\\
+    & Thesis: ``Memristor-based computing'' | \small Advisor: Prof. Fernanda \textsc{Kastenschidt} \\&\\
+
+    2014 & Exchange Year at Tübingen Universität, Germany
+\end{tabular}
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+    \textsc{Portuguese:}&Mothertongue\\
+    \textsc{English:}&Fluent\\
+    \textsc{German:}&Basic Knowledge\\
+\end{tabular}
+
+\section{Computer Skills}
+\begin{tabular}{rl}
+    Advanced Knowledge:& C, C++, Linux, Windows, Android, Qt Framework, Visual Studio, \textsc{CMake}, Git, Atlassian Suite (\textsc{Jira}, Confluence)\\
+    Intermediate Knowledge:& \textsc{Vhdl}, SpringBoot, \textsc{Java}, Rust, \textsc{RestAPI}, Weblogic, \textsc{Postman}, \textsc{Tfs}\\
+\end{tabular}
+
+\section{Interests and Activities}
+Technology, Open-Source, Programming\\
+Meditation, 
+
+\end{document}
